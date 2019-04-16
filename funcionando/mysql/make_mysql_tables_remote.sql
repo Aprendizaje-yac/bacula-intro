@@ -1,4 +1,10 @@
 USE bacula;
+--
+-- Note, we use BLOB rather than TEXT because in MySQL,
+--  BLOBs are identical to TEXT except that BLOB is case
+--  sensitive in sorts, which is what we want, and TEXT
+--  is case insensitive.
+--
 CREATE TABLE Filename (
   FilenameId INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
   Name BLOB NOT NULL,
@@ -13,6 +19,20 @@ CREATE TABLE Path (
    INDEX (Path(255))
    );
 
+-- We strongly recommend to avoid the temptation to add new indexes.
+-- In general, these will cause very significant performance
+-- problems in other areas.  A better approch is to carefully check
+-- that all your memory configuation parameters are
+-- suitable for the size of your installation.	If you backup
+-- millions of files, you need to adapt the database memory
+-- configuration parameters concerning sorting, joining and global
+-- memory.  By default, sort and join parameters are very small
+-- (sometimes 8Kb), and having sufficient memory specified by those
+-- parameters is extremely important to run fast.  
+
+-- In File table
+-- FileIndex can be 0 for FT_DELETED files
+-- FileNameId can link to Filename.Name='' for directories
 CREATE TABLE File (
    FileId BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
    FileIndex INTEGER UNSIGNED DEFAULT 0,
@@ -43,6 +63,16 @@ CREATE TABLE RestoreObject (
    PRIMARY KEY(RestoreObjectId),
    INDEX (JobId)
    );
+
+
+#
+# Possibly add one or more of the following indexes
+#  to the above File table if your Verifies are
+#  too slow, but they can slow down backups.
+#
+#  INDEX (PathId),
+#  INDEX (FilenameId),
+#
 
 CREATE TABLE MediaType (
    MediaTypeId INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
@@ -108,12 +138,10 @@ CREATE TABLE Job (
    Comment BLOB,
    FileTable CHAR(20) DEFAULT 'File',
    PRIMARY KEY(JobId),
-   INDEX (Name(128)),
-   INDEX (JobTDate)
+   INDEX (Name(128))
    );
 
-
--- Create a table like Job for long term statistics
+-- Create a table like Job for long term statistics 
 CREATE TABLE JobHisto (
    JobId INTEGER UNSIGNED NOT NULL,
    Job TINYBLOB NOT NULL,
@@ -169,7 +197,7 @@ CREATE TABLE LocationLog (
 );
 
 
-#
+# 
 CREATE TABLE FileSet (
    FileSetId INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
    FileSet TINYBLOB NOT NULL,
@@ -208,16 +236,13 @@ CREATE TABLE Media (
    VolJobs INTEGER UNSIGNED DEFAULT 0,
    VolFiles INTEGER UNSIGNED DEFAULT 0,
    VolBlocks INTEGER UNSIGNED DEFAULT 0,
-   VolParts INTEGER UNSIGNED DEFAULT 0,
-   VolCloudParts INTEGER UNSIGNED DEFAULT 0,
    VolMounts INTEGER UNSIGNED DEFAULT 0,
    VolBytes BIGINT UNSIGNED DEFAULT 0,
    VolABytes BIGINT UNSIGNED DEFAULT 0,
    VolAPadding BIGINT UNSIGNED DEFAULT 0,
    VolHoleBytes BIGINT UNSIGNED DEFAULT 0,
    VolHoles INTEGER UNSIGNED DEFAULT 0,
-   LastPartBytes BIGINT UNSIGNED DEFAULT 0,
-   VolType INTEGER UNSIGNED DEFAULT 0,
+   VolParts INTEGER UNSIGNED DEFAULT 0,   /* Now used for VolType */
    VolErrors INTEGER UNSIGNED DEFAULT 0,
    VolWrites BIGINT UNSIGNED DEFAULT 0,
    VolCapacityBytes BIGINT UNSIGNED DEFAULT 0,
@@ -226,7 +251,6 @@ CREATE TABLE Media (
    Enabled TINYINT DEFAULT 1,
    Recycle TINYINT DEFAULT 0,
    ActionOnPurge     TINYINT	DEFAULT 0,
-   CacheRetention BIGINT UNSIGNED DEFAULT 0,
    VolRetention BIGINT UNSIGNED DEFAULT 0,
    VolUseDuration BIGINT UNSIGNED DEFAULT 0,
    MaxVolJobs INTEGER UNSIGNED DEFAULT 0,
@@ -260,7 +284,6 @@ CREATE TABLE Pool (
    UseOnce TINYINT DEFAULT 0,
    UseCatalog TINYINT DEFAULT 0,
    AcceptAnyVolume TINYINT DEFAULT 0,
-   CacheRetention BIGINT UNSIGNED DEFAULT 0,
    VolRetention BIGINT UNSIGNED DEFAULT 0,
    VolUseDuration BIGINT UNSIGNED DEFAULT 0,
    MaxVolJobs INTEGER UNSIGNED DEFAULT 0,
@@ -306,7 +329,7 @@ CREATE TABLE Log (
 
 
 CREATE TABLE BaseFiles (
-   BaseId BIGINT UNSIGNED AUTO_INCREMENT,
+   BaseId INTEGER UNSIGNED AUTO_INCREMENT,
    BaseJobId INTEGER UNSIGNED NOT NULL REFERENCES Job,
    JobId INTEGER UNSIGNED NOT NULL REFERENCES Job,
    FileId BIGINT UNSIGNED NOT NULL REFERENCES File,
@@ -340,6 +363,7 @@ CREATE TABLE CDImages (
    LastBurn DATETIME,
    PRIMARY KEY (MediaId)
    );
+
 CREATE TABLE Status (
    JobStatus CHAR(1) BINARY NOT NULL,
    JobStatusLong BLOB,
@@ -378,7 +402,7 @@ CREATE TABLE PathHierarchy
      CONSTRAINT pathhierarchy_pkey PRIMARY KEY (PathId)
 );
 
-CREATE INDEX pathhierarchy_ppathid
+CREATE INDEX pathhierarchy_ppathid 
 	  ON PathHierarchy (PPathId);
 
 CREATE TABLE PathVisibility
@@ -409,12 +433,16 @@ CREATE TABLE Snapshot (
   primary key (SnapshotId)
 );
 
-CREATE UNIQUE INDEX snapshot_idx ON Snapshot (Device(255),
+CREATE UNIQUE INDEX snapshot_idx ON Snapshot (Device(255), 
 					      Volume(255),
 					      Name(255));
 
+
+
 CREATE TABLE Version (
-   VersionId INTEGER UNSIGNED NOT NULL
+   VersionId INTEGER UNSIGNED NOT NULL 
    );
 
-INSERT INTO Version (VersionId) VALUES (16);
+-- Initialize Version		 
+INSERT INTO Version (VersionId) VALUES (15);
+

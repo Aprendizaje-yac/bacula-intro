@@ -1,7 +1,7 @@
 version: '2'
 services:
   mysql-director:
-    image: maria-w
+    image: mysql:0.0.1
     environment:                                                                                                                                                                                                  
       MYSQL_ROOT_PASSWORD: root                                                                                                                                                                                   
       MYSQL_DATABASE: bacula                                                                                                                                                                                      
@@ -12,7 +12,7 @@ services:
     ports:
     - 3306:3306/tcp
   director:
-    image: director-w
+    image: director:0.0.1
     stdin_open: true
     tty: true
     links:
@@ -24,11 +24,3 @@ services:
     - 9102:9102/tcp
     - 9103:9103/tcp
     - 10000:10000/tcp
-  cliente:
-    image: catovazquez69/workshop_director_ubuntu18
-    stdin_open: true
-    tty: true
-    environment:
-      - TZ=America/Argentina/Cordoba
-    ports:
-    - 9302:9102/tcp

@@ -1,7 +1,7 @@
 FROM ubuntu:bionic
 
 LABEL maintainer="Backup Team PSI" \
-      version="0.0.1"
+      version="0.0.7"
 
 # Para que no me tire bronca cuando instalo bacula con mysql
 ENV DEBIAN_FRONTEND noninteractive
