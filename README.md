@@ -1,3 +1,5 @@
 # Dockers para la implementación de Bacula
 ## Comenzar con la configuración.
-Se deberá utilizar la carpeta directorio.
+Pasos necesarios:
+* Contruir las imagenes correspondientes
+* desplegar los contenedores utilizando docker-compose.yml
