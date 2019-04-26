@@ -1,6 +1,5 @@
 
 
-
 <!DOCTYPE html>
 <!--[if IE 8]><html class="no-js lt-ie9" lang="es" > <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="es" > <!--<![endif]-->
@@ -9,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Índice &mdash; documentación de Bacula - 0.0.1</title>
+  <title>Saber a que archivos se le están haciendo backups &mdash; documentación de Bacula - 0.0.1</title>
   
 
   
@@ -35,8 +34,9 @@
   
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="index" title="Índice" href="#" />
-    <link rel="search" title="Búsqueda" href="search.html" /> 
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" />
+    <link rel="prev" title="Como restaurar backups en bacula" href="recuperar.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -85,12 +85,15 @@
             
             
               <p class="caption"><span class="caption-text">Contenido:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="introduccion.html">Introducción a Bacula</a></li>
 <li class="toctree-l1"><a class="reference internal" href="instalacion.html">Instalando Bacula en la PSI</a></li>
-<li class="toctree-l1"><a class="reference internal" href="revision.html">Saber a que archivos se le están haciendo backups</a></li>
-<li class="toctree-l1"><a class="reference internal" href="basededatos.html">Agregar backup de base de datos a Bacula</a></li>
 <li class="toctree-l1"><a class="reference internal" href="recuperar.html">Como restaurar backups en bacula</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Saber a que archivos se le están haciendo backups</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#sistemas-de-backups">Sistemas de backups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#procedimiento-de-visualizacion-de-backups">Procedimiento de Visualizacion de Backups</a></li>
+</ul>
+</li>
 </ul>
 
             
@@ -136,12 +139,14 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>Índice</li>
+      <li>Saber a que archivos se le están haciendo backups</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
+            <a href="_sources/revision.rst.txt" rel="nofollow"> View page source</a>
+          
         
       </li>
     
@@ -153,11 +158,38 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-
-<h1 id="index">Índice</h1>
-
-<div class="genindex-jumpbox">
- 
+  <div class="section" id="saber-a-que-archivos-se-le-estan-haciendo-backups">
+<h1>Saber a que archivos se le están haciendo backups<a class="headerlink" href="#saber-a-que-archivos-se-le-estan-haciendo-backups" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>Es de suma importancia que verifiquen que los servidores y los archivos listados, para backup, sean los requeridos para que se pueda restaurar el sistema en caso de un desastre. Además, puede revisar si el backup configurado se realizó correctamente.</p>
+<p>En caso de que desee agregar nuevos archivos o modificar los existentes, se solicita que se envíe un ticket especificando:</p>
+<ul class="simple">
+<li><p>Servidor</p></li>
+<li><p>Directorios con los archivos a incluir/excluir</p></li>
+</ul>
+<p>En base a dicha solicitud se realizarán los cambios apropiados y se dispondrá de los backups a partir de la fecha que haya ingresado al sistema de backup.</p>
+<div class="section" id="sistemas-de-backups">
+<h2>Sistemas de backups<a class="headerlink" href="#sistemas-de-backups" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Los backups se realizan a sistemas de archivos (DLE, conjunto de archivos a los que se hace backup) y base de datos.</p>
+<p>Los sistemas de archivos están detallados en <a class="reference external" href="http://backups.psi.unc.edu.ar:/dle/">http://backups.psi.unc.edu.ar:/dle/</a></p>
+</div>
+<div class="section" id="procedimiento-de-visualizacion-de-backups">
+<h2>Procedimiento de Visualizacion de Backups<a class="headerlink" href="#procedimiento-de-visualizacion-de-backups" title="Enlazar permanentemente con este título">¶</a></h2>
+<ol class="arabic simple">
+<li><p>Ingresar al link <a class="reference external" href="http://backups.psi.unc.edu.ar">http://backups.psi.unc.edu.ar</a></p></li>
+</ol>
+<img alt="_images/revision1.png" src="_images/revision1.png" />
+<ol class="arabic simple" start="2">
+<li><p>Acceder a la sección <strong>Reportes</strong>: Reportes Diarios (Allí se muestran reportes diarios de los backups que se hacen)</p></li>
+</ol>
+<img alt="_images/revision2.png" src="_images/revision2.png" />
+<ol class="arabic simple" start="3">
+<li><p>Al ingresar a alguno de ellos se mostrarán los backups realizados en esa fecha por servidor bajo el nombre de Job, cuyo formato es <em>&lt;servidor&gt;-&lt;dle&gt;</em>.</p></li>
+</ol>
+<img alt="_images/revision3.png" src="_images/revision3.png" />
+<ol class="arabic simple" start="4">
+<li><p>Usar el filtro para buscar el servidor a verificar, y se podrán visualizar los archivos que incluye el dle accediendo a <a class="reference external" href="http://backups.psi.unc.edu.ar:9000/dle/">http://backups.psi.unc.edu.ar:9000/dle/</a> y seleccionando la el dle correspondiente.</p></li>
+</ol>
+</div>
 </div>
 
 
@@ -165,6 +197,13 @@
            
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="recuperar.html" class="btn btn-neutral float-left" title="Como restaurar backups en bacula" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>

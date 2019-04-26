@@ -12,11 +12,15 @@ Bienvenido a la documentacion de Bacula!
 
    introduccion
    instalacion
+   revision
+   basededatos
+   recuperar
    escribir
    publicar
    ejemplos
    recetas/inicio
    alternativas/inicio
+   
 
 
 
