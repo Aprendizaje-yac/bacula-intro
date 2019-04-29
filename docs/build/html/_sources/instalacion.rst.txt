@@ -28,52 +28,52 @@ Como inicializar el servidor
 
 Para poder iniciar el stack del servidor es necesario ubicarse dentro de la carpeta donde se encuentre la definición del servicio.
 
+  .. code-block:: yaml
+    :linenos:
 
-::
+      version: '2'                                                                                                                                                                                    
+      services:                                                                                                                                                                                       
+        bacula-db-test:                                                                                                                                                                               
+          image: hub.psi.unc.edu.ar/dev/bacula-db:latest                                                                                                                                              
+          environment:                                                                                                                                                                                
+            MYSQL_ROOT_PASSWORD: root                                                                                                                                                                 
+            MYSQL_DATABASE: bacula                                                                                                                                                                    
+            MYSQL_USER: bacula                                                                                                                                                                        
+            MYSQL_PASSWORD: bacula                                                                                                                                                                    
+          stdin_open: true                                                                                                                                                                            
+          tty: true                                                                                                                                                                                   
+          ports:                                                                                                                                                                                      
+          - 3306:3306                                                                                                                                                                                 
+          volumes:                                                                                                                                                                                    
+          - /srv/docker-persist/mysql:/var/lib/mysql
+          links:
+          - bacula-test:director
+          labels:
+            io.rancher.container.pull_image: always
+        bacula-test:
+          image: hub.psi.unc.edu.ar/dev/bacula-director:0.0.4
+          stdin_open: true
+          tty: true
+          links:
+          - bacula-db-test:database
+          ports:
+          - 10002:10000/tcp
+          - 9101:9101
+          - 9102:9102
+          - 9103:9103
+          volumes:
+          - /srv/docker-persist/config:/etc/webmin/bacula-backup/config
+          - /srv/docker-persist/director/etc-bacula:/etc/bacula
+          - /backup-1:/mnt/backup-1
+          - /srv/docker-persist/director/var-bacula/lib:/var/lib/bacula
+          - /srv/docker-persist/director/var-bacula/run:/var/run/bacula
+          - /srv/docker-persist/director/run-bacula:/run/bacula
+          - /etc/hosts:/etc/hosts
+      #   - /etc/resolv.conf:/etc/resolv.conf
+      #    command: /bin/bash up-services.sh
+          labels:
+            io.rancher.container.pull_image: always
 
-version: '2'                                                                                                                                                                                    
-services:                                                                                                                                                                                       
-  bacula-db-test:                                                                                                                                                                               
-    image: hub.psi.unc.edu.ar/dev/bacula-db:latest                                                                                                                                              
-    environment:                                                                                                                                                                                
-      MYSQL_ROOT_PASSWORD: root                                                                                                                                                                 
-      MYSQL_DATABASE: bacula                                                                                                                                                                    
-      MYSQL_USER: bacula                                                                                                                                                                        
-      MYSQL_PASSWORD: bacula                                                                                                                                                                    
-    stdin_open: true                                                                                                                                                                            
-    tty: true                                                                                                                                                                                   
-    ports:                                                                                                                                                                                      
-    - 3306:3306                                                                                                                                                                                 
-    volumes:                                                                                                                                                                                    
-    - /srv/docker-persist/mysql:/var/lib/mysql
-    links:
-    - bacula-test:director
-    labels:
-      io.rancher.container.pull_image: always
-  bacula-test:
-    image: hub.psi.unc.edu.ar/dev/bacula-director:0.0.4
-    stdin_open: true
-    tty: true
-    links:
-    - bacula-db-test:database
-    ports:
-    - 10002:10000/tcp
-    - 9101:9101
-    - 9102:9102
-    - 9103:9103
-    volumes:
-    - /srv/docker-persist/config:/etc/webmin/bacula-backup/config
-    - /srv/docker-persist/director/etc-bacula:/etc/bacula
-    - /backup-1:/mnt/backup-1
-    - /srv/docker-persist/director/var-bacula/lib:/var/lib/bacula
-    - /srv/docker-persist/director/var-bacula/run:/var/run/bacula
-    - /srv/docker-persist/director/run-bacula:/run/bacula
-    - /etc/hosts:/etc/hosts
-#   - /etc/resolv.conf:/etc/resolv.conf
-#    command: /bin/bash up-services.sh
-    labels:
-      io.rancher.container.pull_image: always
-
-::
+    
 
 

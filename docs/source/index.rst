@@ -3,13 +3,21 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Bienvenido a la documentacion de Bacula!
+Bienvenido a la documentación!
 ==================================
 
 .. toctree::
    :maxdepth: 3
    :caption: Contenido:
 
+   objetivos
+   hipotesis
+   destinatarios
+   beneficios
+   estudio_tecnico
+   metodologia
+   resumen_tecnico
+   programacion
    introduccion
    instalacion
    revision

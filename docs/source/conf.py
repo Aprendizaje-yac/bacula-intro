@@ -54,7 +54,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Bacula'
+project = u'Backups en la PSI'
 copyright = u'2019, Spitale Solange, Vazquez Petrini Santiago'
 author = u'Spitale Solange, Vazquez Petrini Santiago'
 
