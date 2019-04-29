@@ -4,42 +4,52 @@
    contain the root `toctree` directive.
 
 Objetivo y problemática del proyecto
-==================================
+=====================================
 
 El siguiente proyecto pretende desarrollar una propuesta para realizar backups en los diversos equipos
-de la Prosecretaría Informática de la Universidad Nacional de Córdoba. 
+de la Prosecretaría Informática de la Universidad Nacional de Córdoba (PSI). 
+
+La PSI tiene como misión contribuir con las funciones de docencia, investigación y extensión de la Universidad Nacional de Córdoba, 
+coordinando el uso de los recursos relacionados con la informática. 
+
+Para ello sus acciones se encuadran en tres ejes principales:
+
+* Formulación y ejecución de políticas relacionadas con las Tecnologías de Información y Comunicaciones (TICs).
+* Adquisición y administración de sistemas de información.
+* Planificación y administración de la infraestructura de red y servicios informáticos.
+
+`PSI http://www.psi.unc.edu.ar/`
+
+A fin de lograr con esto, la PSI cuenta con una infraestructura importante de la cual es importante resguardar los datos. 
 
 El backup, o copia de resguardo, se refiere al proceso de copiar y almacenar datos de diversos equipos (computadoras, switchs, etc)
-en otro/otros dispositivos con el objeto de poder restaurar la información en caso de que la información original se haya eliminado
-o sus datos se encuentren corruptos. 
+en otro/otros dispositivos con el objeto de poder restaurar la información en caso de que la información original se haya eliminado o
+sus datos se encuentren corruptos. También brinda la posibilidad de acceder a datos anteriores para buscar archivos específicos de acuerdo
+con las políticas de retención de datos definidas.
 
 
 
 
-Componentes de Bacula
--------
 
-Director (DIR, bacula-director)
-~~~~~~~~
-Es el programa servidor que supervisa todas las funciones necesarias para las operaciones de copia de seguridad y restauración. Es el eje central de Bacula y en él se declaran todos los parámetros necesarios. Se ejecuta como un “demonio” en el servidor.
-
-Storage (SD, bacula-sd)
-~~~~~~~~
-Es el programa que gestiona las unidades de almacenamiento donde se almacenarán los datos. Es el responsable de escribir y leer en los medios que utilizaremos para nuestras copias de seguridad. Se ejecuta como un “demonio” en la máquina propietaria de los medios utilizados. En muchos casos será en el propio servidor, pero también puede ser otro equipo independiente.
+Objetivo General
+-----------------
+Implementar un sistema de backups para la Prosecretaría Informática de la Universidad Nacional de Córdoba.
 
 
-Catalog
-~~~~~~~~
-es la base de datos (MySQL en nuestro caso) que almacena la información necesaria para localizar dónde se encuentran los datos salvaguardados de cada archivo, de cada cliente, etc. En muchos casos será en el propio servidor, pero también puede ser otro equipo independiente.
+Objetivos Específicos
+----------------------
+
+* Estudiar los casos de éxitos de otros sistemas de backups en otras universidades.
+* Captar las necesidades particulares de cada área.
+* Determinar qué sistema de backup puede ser implementando en la PSI, en base a políticas definidas.
+* Especificar los servicios que ofrecerá el sistema para los distintos usuarios. 
+* Analizar las siguientes tecnologías a los fines de poder seleccionar y aplicar en el sistema de backups:
+    * Docker
+    * Rancher
+    * Grafana
+    * Ansible
+    * Drive
+* Realizar un sistema de monitoreo, para el mantenimiento de los servidores.
+* Planificar, definir y desarrollar un sistema de backups con despliegue automático. 
 
 
-Console (bconsole)
-~~~~~~~~
-Es el programa que permite la interacción con el “Director” para todas las funciones del servidor. La versión original es una aplicación en modo texto (bconsole). Existen igualmente aplicaciones GUI para Windows y Linux (Webmin, Bacula Admin Tool, Bacuview, Webacula, Reportula, Bacula-Web, etc).
-
-
-File (FD)
-~~~~~~~~
-Este servicio, conocido como “cliente” o servidor de archivos está instalado en cada máquina de la que se realizará el backup y es específico al sistema operativo donde se ejecuta. Responsable para enviar al “Director” los datos cuando este lo requiera.
-
-.. image:: ./_images/interaccion.jpeg
