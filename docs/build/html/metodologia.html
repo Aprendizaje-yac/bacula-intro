@@ -1,6 +1,5 @@
 
 
-
 <!DOCTYPE html>
 <!--[if IE 8]><html class="no-js lt-ie9" lang="es" > <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="es" > <!--<![endif]-->
@@ -9,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Índice &mdash; documentación de Backups en la PSI - 0.0.1</title>
+  <title>Metodología &mdash; documentación de Backups en la PSI - 0.0.1</title>
   
 
   
@@ -35,8 +34,10 @@
   
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="index" title="Índice" href="#" />
-    <link rel="search" title="Búsqueda" href="search.html" /> 
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" />
+    <link rel="next" title="Introducción a Bacula" href="introduccion.html" />
+    <link rel="prev" title="Estudio técnico" href="estudio_tecnico.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -85,10 +86,10 @@
             
             
               <p class="caption"><span class="caption-text">Contenido:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="objetivos.html">Objetivo y problemática del proyecto</a></li>
 <li class="toctree-l1"><a class="reference internal" href="estudio_tecnico.html">Estudio técnico</a></li>
-<li class="toctree-l1"><a class="reference internal" href="metodologia.html">Metodología</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Metodología</a></li>
 <li class="toctree-l1"><a class="reference internal" href="introduccion.html">Introducción a Bacula</a></li>
 <li class="toctree-l1"><a class="reference internal" href="instalacion.html">Instalando Bacula en la PSI</a></li>
 <li class="toctree-l1"><a class="reference internal" href="revision.html">Saber a que archivos se le están haciendo backups</a></li>
@@ -139,12 +140,14 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>Índice</li>
+      <li>Metodología</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
+            <a href="_sources/metodologia.rst.txt" rel="nofollow"> View page source</a>
+          
         
       </li>
     
@@ -156,11 +159,17 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-
-<h1 id="index">Índice</h1>
-
-<div class="genindex-jumpbox">
- 
+  <div class="section" id="metodologia">
+<h1>Metodología<a class="headerlink" href="#metodologia" title="Enlazar permanentemente con este título">¶</a></h1>
+<hr class="docutils" />
+<p>La metodología para la implementación de un sistema de backups en la Universidad Nacional de Córdoba consistirá en especificar
+de forma detallada la infraestructura existente en la PSI.
+Se realizará un relevamiento para conocer, visualizar los distintos casos a realizar
+respaldos <em>(Ej: cantidad de archivos, tamaño de archivos, maquinas virtuales, servidores fisicos etc)</em>.</p>
+<p>Una vez conocido los distintos casos, analizar los distintos esquemas de respaldos y definir cual se adapta más a la necesidad de cada servidor.
+Por otro lado, evaluar distintas herramientas de backups OpenSource que se encuentran en el mercado, y en el caso de ser necesario, realizar modificaciones para adaptarlas a nuestro campo de implementación.</p>
+<p>Se considera que la metodologia de <strong>entrega incremental</strong> es la que mejor se adapta a este, ya que las entregas se relacionan
+con la implementacion de las distintas políticas</p>
 </div>
 
 
@@ -168,6 +177,15 @@
            
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="introduccion.html" class="btn btn-neutral float-right" title="Introducción a Bacula" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="estudio_tecnico.html" class="btn btn-neutral float-left" title="Estudio técnico" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>

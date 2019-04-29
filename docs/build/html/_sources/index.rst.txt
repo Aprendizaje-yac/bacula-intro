@@ -10,7 +10,14 @@ Bienvenido a la documentación!
    :maxdepth: 3
    :caption: Contenido:
 
-   objetivo
+   objetivos
+   hipotesis
+   destinatarios
+   beneficios
+   estudio_tecnico
+   metodologia
+   resumen_tecnico
+   programacion
    introduccion
    instalacion
    revision

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Introducción a Bacula &mdash; documentación de Backups en la PSI - 0.0.1</title>
+  <title>Objetivo y problemática del proyecto &mdash; documentación de Backups en la PSI - 0.0.1</title>
   
 
   
@@ -36,8 +36,8 @@
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Índice" href="genindex.html" />
     <link rel="search" title="Búsqueda" href="search.html" />
-    <link rel="next" title="Instalando Bacula en la PSI" href="instalacion.html" />
-    <link rel="prev" title="Metodología" href="metodologia.html" /> 
+    <link rel="next" title="Estudio técnico" href="estudio_tecnico.html" />
+    <link rel="prev" title="Bienvenido a la documentación!" href="index.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -87,11 +87,7 @@
             
               <p class="caption"><span class="caption-text">Contenido:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="objetivos.html">Objetivo y problemática del proyecto</a></li>
-<li class="toctree-l1"><a class="reference internal" href="estudio_tecnico.html">Estudio técnico</a></li>
-<li class="toctree-l1"><a class="reference internal" href="metodologia.html">Metodología</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Introducción a Bacula</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#definicion">Definición</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Objetivo y problemática del proyecto</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#componentes-de-bacula">Componentes de Bacula</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#director-dir-bacula-director">Director (DIR, bacula-director)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#storage-sd-bacula-sd">Storage (SD, bacula-sd)</a></li>
@@ -102,6 +98,9 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="estudio_tecnico.html">Estudio técnico</a></li>
+<li class="toctree-l1"><a class="reference internal" href="metodologia.html">Metodología</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduccion.html">Introducción a Bacula</a></li>
 <li class="toctree-l1"><a class="reference internal" href="instalacion.html">Instalando Bacula en la PSI</a></li>
 <li class="toctree-l1"><a class="reference internal" href="revision.html">Saber a que archivos se le están haciendo backups</a></li>
 <li class="toctree-l1"><a class="reference internal" href="basededatos.html">Agregar backup de base de datos a Bacula</a></li>
@@ -151,13 +150,13 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>Introducción a Bacula</li>
+      <li>Objetivo y problemática del proyecto</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="_sources/introduccion.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/objetivos.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -170,13 +169,13 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="introduccion-a-bacula">
-<h1>Introducción a Bacula<a class="headerlink" href="#introduccion-a-bacula" title="Enlazar permanentemente con este título">¶</a></h1>
-<div class="section" id="definicion">
-<h2>Definición<a class="headerlink" href="#definicion" title="Enlazar permanentemente con este título">¶</a></h2>
-<p>Bacula es un conjunto de programas informáticos que le permite al administrador del sistema administrar copias de seguridad, recuperación y verificación de datos de la computadora a través de una red de computadoras de diferentes tipos. Bacula también puede ejecutarse por completo en una sola computadora y puede realizar copias de seguridad en varios tipos de medios, incluidos cinta y disco.
-En términos técnicos, es un programa de respaldo basado en cliente / servidor de red. Bacula es relativamente fácil de usar y eficiente, y ofrece muchas funciones avanzadas de administración de almacenamiento que facilitan la búsqueda y recuperación de archivos perdidos o dañados. Debido a su diseño modular, Bacula es escalable desde pequeños sistemas informáticos individuales hasta sistemas que constan de cientos de computadoras ubicadas en una gran red.</p>
-</div>
+  <div class="section" id="objetivo-y-problematica-del-proyecto">
+<h1>Objetivo y problemática del proyecto<a class="headerlink" href="#objetivo-y-problematica-del-proyecto" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>El siguiente proyecto pretende desarrollar una propuesta para realizar backups en los diversos equipos
+de la Prosecretaría Informática de la Universidad Nacional de Córdoba.</p>
+<p>El backup, o copia de resguardo, se refiere al proceso de copiar y almacenar datos de diversos equipos (computadoras, switchs, etc)
+en otro/otros dispositivos con el objeto de poder restaurar la información en caso de que la información original se haya eliminado
+o sus datos se encuentren corruptos.</p>
 <div class="section" id="componentes-de-bacula">
 <h2>Componentes de Bacula<a class="headerlink" href="#componentes-de-bacula" title="Enlazar permanentemente con este título">¶</a></h2>
 <div class="section" id="director-dir-bacula-director">
@@ -211,10 +210,10 @@ En términos técnicos, es un programa de respaldo basado en cliente / servidor 
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="instalacion.html" class="btn btn-neutral float-right" title="Instalando Bacula en la PSI" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="estudio_tecnico.html" class="btn btn-neutral float-right" title="Estudio técnico" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="metodologia.html" class="btn btn-neutral float-left" title="Metodología" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="index.html" class="btn btn-neutral float-left" title="Bienvenido a la documentación!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
