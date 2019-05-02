@@ -90,6 +90,8 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Objetivo y problemática del proyecto</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#objetivo-general">Objetivo General</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#objetivos-especificos">Objetivos Específicos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#destinatarios">Destinatarios</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#beneficios-esperados">Beneficios Esperados</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="estudio_tecnico.html">Estudio técnico</a></li>
@@ -167,18 +169,20 @@
 <h1>Objetivo y problemática del proyecto<a class="headerlink" href="#objetivo-y-problematica-del-proyecto" title="Enlazar permanentemente con este título">¶</a></h1>
 <p>El siguiente proyecto pretende desarrollar una propuesta para realizar backups en los diversos equipos
 de la Prosecretaría Informática de la Universidad Nacional de Córdoba (PSI).</p>
-<p>La PSI tiene como misión contribuir con las funciones de docencia, investigación y extensión de la Universidad Nacional de Córdoba,
+<p><a class="footnote-reference" href="#psi" id="id1">[1]</a> La PSI tiene como misión contribuir con las funciones de docencia, investigación y extensión de la Universidad Nacional de Córdoba,
 coordinando el uso de los recursos relacionados con la informática.</p>
 <p>Para ello sus acciones se encuadran en tres ejes principales:</p>
 <ul class="simple">
-<li><p>Formulación y ejecución de políticas relacionadas con las Tecnologías de Información y Comunicaciones (TICs).</p></li>
-<li><p>Adquisición y administración de sistemas de información.</p></li>
-<li><p>Planificación y administración de la infraestructura de red y servicios informáticos.</p></li>
+<li>Formulación y ejecución de políticas relacionadas con las Tecnologías de Información y Comunicaciones (TICs).</li>
+<li>Adquisición y administración de sistemas de información.</li>
+<li>Planificación y administración de la infraestructura de red y servicios informáticos.</li>
 </ul>
-<p><cite>PSI http://www.psi.unc.edu.ar/</cite></p>
-<p>A fin de lograr con esto, la PSI cuenta con una infraestructura importante de la cual es importante resguardar los datos.</p>
+<p>A fin de lograr con esto, la PSI cuenta con una infraestructura de gran envergadura de la cual es importante resguardar los datos.
+Actualmente la UNC, cuenta con un procedimiento para realizar copias de seguridad de la información, pero dado el crecimiento tanto
+en la cantidad de información como en las tecnologías utilizadas, se planteo la necesidad de buscar una nueva solución
+a este nuevo escenario.</p>
 <p>El backup, o copia de resguardo, se refiere al proceso de copiar y almacenar datos de diversos equipos (computadoras, switchs, etc)
-en otro/otros dispositivos con el objeto de poder restaurar la información en caso de que la información original se haya eliminado o
+en otro/otros dispositivos con el objeto de poder restaurar los datos en caso de que la información original se haya eliminado o
 sus datos se encuentren corruptos. También brinda la posibilidad de acceder a datos anteriores para buscar archivos específicos de acuerdo
 con las políticas de retención de datos definidas.</p>
 <div class="section" id="objetivo-general">
@@ -188,24 +192,42 @@ con las políticas de retención de datos definidas.</p>
 <div class="section" id="objetivos-especificos">
 <h2>Objetivos Específicos<a class="headerlink" href="#objetivos-especificos" title="Enlazar permanentemente con este título">¶</a></h2>
 <ul class="simple">
-<li><p>Estudiar los casos de éxitos de otros sistemas de backups en otras universidades.</p></li>
-<li><p>Captar las necesidades particulares de cada área.</p></li>
-<li><p>Determinar qué sistema de backup puede ser implementando en la PSI, en base a políticas definidas.</p></li>
-<li><p>Especificar los servicios que ofrecerá el sistema para los distintos usuarios.</p></li>
-<li><dl class="simple">
-<dt>Analizar las siguientes tecnologías a los fines de poder seleccionar y aplicar en el sistema de backups:</dt><dd><ul>
-<li><p>Docker</p></li>
-<li><p>Rancher</p></li>
-<li><p>Grafana</p></li>
-<li><p>Ansible</p></li>
-<li><p>Drive</p></li>
+<li>Captar las necesidades particulares de cada área.</li>
+<li>Determinar qué sistema de backup puede ser implementando en la PSI, en base a políticas definidas.</li>
+<li>Especificar los servicios que ofrecerá el sistema para los distintos usuarios.</li>
+<li><dl class="first docutils">
+<dt>Analizar las siguientes tecnologías a los fines de poder seleccionar y aplicar en el sistema de backups:</dt>
+<dd><ul class="first last">
+<li>Docker</li>
+<li>Rancher</li>
+<li>Grafana</li>
+<li>Ansible</li>
+<li>Drive</li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><p>Realizar un sistema de monitoreo, para el mantenimiento de los servidores.</p></li>
-<li><p>Planificar, definir y desarrollar un sistema de backups con despliegue automático.</p></li>
+<li>Realizar un sistema de monitoreo, para el mantenimiento de los servidores.</li>
+<li>Planificar, definir y desarrollar un sistema de backups con despliegue automático.</li>
 </ul>
+</div>
+<div class="section" id="destinatarios">
+<h2>Destinatarios<a class="headerlink" href="#destinatarios" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>El sistema de backups estará dirigido a toda la comunidad de la PSI.</p>
+</div>
+<div class="section" id="beneficios-esperados">
+<h2>Beneficios Esperados<a class="headerlink" href="#beneficios-esperados" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>La implementación de un sistema de backups ofrece diversos beneficios tanto para la PSI como para los usuarios de los diversos sistemas, tales como:</p>
+<ul class="simple">
+<li>Capacidad de respuesta: gracias a las copias guardadas, se podrá volver a tener todos los sistemas plenamente operativos en un breve lapso de tiempo.Esto se traduce en un nivel superior de eficiencia, permitiendo restaurar la información y servicios de manera eficaz.</li>
+<li>Incremento de la confianza en los usuarios: al disponer de redundancia de información</li>
+</ul>
+<table class="docutils footnote" frame="void" id="psi" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>PSI <a class="reference external" href="http://www.psi.unc.edu.ar/">http://www.psi.unc.edu.ar/</a></td></tr>
+</tbody>
+</table>
 </div>
 </div>
 

@@ -6,7 +6,6 @@
 Estudio técnico
 ==================================
 
-
 En el presente proyecto de final de grado se pretende proporcionar una solución de respaldo de información en la Universidad Nacional de Córdoba, 
 El proyecto esta en sus primeras etapas de planificación.
 Para poder llevarlo a cabo es necesario incorporar ciertos conocimientos:

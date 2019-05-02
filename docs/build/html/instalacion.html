@@ -88,11 +88,8 @@
               <p class="caption"><span class="caption-text">Contenido:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="objetivos.html">Objetivo y problemática del proyecto</a></li>
-<<<<<<< HEAD
 <li class="toctree-l1"><a class="reference internal" href="estudio_tecnico.html">Estudio técnico</a></li>
 <li class="toctree-l1"><a class="reference internal" href="metodologia.html">Metodología</a></li>
-=======
->>>>>>> b7a354d588b9566527bbd0ad69c614e44987c836
 <li class="toctree-l1"><a class="reference internal" href="introduccion.html">Introducción a Bacula</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Instalando Bacula en la PSI</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#configuracion-inicial-de-bacula">Configuración inicial de Bacula</a></li>
@@ -172,17 +169,18 @@
 <h2>Configuración inicial de Bacula<a class="headerlink" href="#configuracion-inicial-de-bacula" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>En un docker con las librerías basadas en Debian, se realizaron los siguientes pasos:</p>
 <ul class="simple">
-<li><p>Instalación de Apache, MySQL y PHP. Es necesario el servidor de aplicaciones web para correr Webmin en el servidor y así tener una herramienta gráfica muy potente para administrar no solo Bacula sino también todo el sistema y servicios que tengamos en el servidor, además necesitaremos el SGBD MySQL para que Bacula lo use en sus bases de datos.</p></li>
-<li><dl class="simple">
-<dt>Instalación de los paquetes necesarios de cliente y servidor Bacula.</dt><dd><ul>
-<li><p>bacula bacula-client bacula-common-mysql</p></li>
-<li><p>bacula-director-mysql bacula-sd-mysql bacula-server bacula-traymonitor</p></li>
+<li>Instalación de Apache, MySQL y PHP. Es necesario el servidor de aplicaciones web para correr Webmin en el servidor y así tener una herramienta gráfica muy potente para administrar no solo Bacula sino también todo el sistema y servicios que tengamos en el servidor, además necesitaremos el SGBD MySQL para que Bacula lo use en sus bases de datos.</li>
+<li><dl class="first docutils">
+<dt>Instalación de los paquetes necesarios de cliente y servidor Bacula.</dt>
+<dd><ul class="first last">
+<li>bacula bacula-client bacula-common-mysql</li>
+<li>bacula-director-mysql bacula-sd-mysql bacula-server bacula-traymonitor</li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><p>Configuración de la base de datos que usará bacula-director</p></li>
-<li><p>Instalación de Webmin</p></li>
+<li>Configuración de la base de datos que usará bacula-director</li>
+<li>Instalación de Webmin</li>
 </ul>
 <p>Para instalar Webmin tenemos que descargarlo desde su web oficial <a class="reference external" href="http://www.webmin.com/download.html">http://www.webmin.com/download.html</a> y descargar la versión para Debian. Una vez finalizada la descarga entramos al directorio donde se ha descargado e instalamos el paquete:
 dpkg -i nombre_paquete.deb.

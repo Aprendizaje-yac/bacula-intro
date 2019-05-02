@@ -11,9 +11,6 @@ Bienvenido a la documentación!
    :caption: Contenido:
 
    objetivos
-   hipotesis
-   destinatarios
-   beneficios
    estudio_tecnico
    metodologia
    resumen_tecnico

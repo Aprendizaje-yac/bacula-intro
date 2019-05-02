@@ -88,11 +88,8 @@
               <p class="caption"><span class="caption-text">Contenido:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="objetivos.html">Objetivo y problemática del proyecto</a></li>
-<<<<<<< HEAD
 <li class="toctree-l1"><a class="reference internal" href="estudio_tecnico.html">Estudio técnico</a></li>
 <li class="toctree-l1"><a class="reference internal" href="metodologia.html">Metodología</a></li>
-=======
->>>>>>> b7a354d588b9566527bbd0ad69c614e44987c836
 <li class="toctree-l1"><a class="reference internal" href="introduccion.html">Introducción a Bacula</a></li>
 <li class="toctree-l1"><a class="reference internal" href="instalacion.html">Instalando Bacula en la PSI</a></li>
 <li class="toctree-l1"><a class="reference internal" href="revision.html">Saber a que archivos se le están haciendo backups</a></li>
@@ -176,13 +173,13 @@ En tyrion, se despliegan dockers (con el nombre de la base de datos a backupear)
 <div class="section" id="pasos-para-agregar-una-base-de-datos">
 <h2>Pasos para agregar una base de datos<a class="headerlink" href="#pasos-para-agregar-una-base-de-datos" title="Enlazar permanentemente con este título">¶</a></h2>
 <ol class="arabic simple">
-<li><p>Obtenemos la ip del servidor donde se encuentra la base de datos</p></li>
+<li>Obtenemos la ip del servidor donde se encuentra la base de datos</li>
 </ol>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ssh</span> <span class="n">databases</span><span class="o">-</span><span class="n">mariadb</span><span class="o">-</span><span class="n">dev</span><span class="o">.</span><span class="n">psi</span> <span class="n">ipadd</span>
 </pre></div>
 </div>
 <ol class="arabic simple" start="2">
-<li><p>En tyrion accedemos al /etc/hosts y agregamos el servidor nuevo:</p></li>
+<li>En tyrion accedemos al /etc/hosts y agregamos el servidor nuevo:</li>
 </ol>
 <div class="highlight-txt notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
@@ -217,13 +214,13 @@ En tyrion, se despliegan dockers (con el nombre de la base de datos a backupear)
 </td></tr></table></div>
 <p><em>Aclaración: por ahora se lo agrega en los falta agregar ya que se le realizará backup por medio de la red de administración hasta que tenga interfaz por la red de backup.</em></p>
 <ol class="arabic simple" start="2">
-<li><p>Comprobar la conexión por medio haciendo:</p></li>
+<li>Comprobar la conexión por medio haciendo:</li>
 </ol>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ping</span> <span class="n">databases</span><span class="o">-</span><span class="n">mariadb</span><span class="o">-</span><span class="n">dev</span><span class="o">.</span><span class="n">backup</span><span class="o">.</span><span class="n">unc</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">ar</span>
 </pre></div>
 </div>
 <ol class="arabic simple" start="3">
-<li><p>Acceder a <strong>/root/tools/configuration/data/dbarmy/databases.yml</strong> y agregar el nuevo servidor. Ejemplo:</p></li>
+<li>Acceder a <strong>/root/tools/configuration/data/dbarmy/databases.yml</strong> y agregar el nuevo servidor. Ejemplo:</li>
 </ol>
 <div class="highlight-txt notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
@@ -266,7 +263,7 @@ En tyrion, se despliegan dockers (con el nombre de la base de datos a backupear)
 </td></tr></table></div>
 <p><em>Se completa el service_name con el nombre del servidor y database_srv con la dirección completa del servidor. A port el incrementamos uno del anterior (databases-mariadb-3 es 9057 entonce este es 9058), En type colocamos el tipo, y ipv4_address lo dejamos como esta (ya no se usa) y ipv4_army contiene la ip del servidor tyrion.</em></p>
 <ol class="arabic simple" start="4">
-<li><p>Luego se ejecuta: <em>/root/tools/configuration/actualizar_stack_bd.sh</em></p></li>
+<li>Luego se ejecuta: <em>/root/tools/configuration/actualizar_stack_bd.sh</em></li>
 </ol>
 <p>Dicho script toma del stack de rancher “databases” aquellos servicios que están inactivos y los guarda en /tmp/inactivos.tmp
 Luego se ejecuta el script de python que genera los clients, jobs y filesets correspondientes. Finalmente actualiza la carpeta donde bacula lee los clients, jobs y filesets y verifica que las configuraciones sean las correctas antes de reiniciar el director.
