@@ -109,3 +109,7 @@ Se considera que la metodologia de **entrega incremental** es la que mejor se ad
 con la implementacion de las distintas políticas
 
 
+Programación de actividades
+-----------------------------
+
+.. image:: ./_images/actividades.jpg
