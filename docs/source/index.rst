@@ -11,27 +11,26 @@ Bienvenido a la documentación!
    :caption: Contenido:
 
    objetivos
-   estudio_tecnico
+.. estudio_tecnico
    metodologia
    resumen_tecnico
    programacion
-   introduccion
-   instalacion
-   revision
-   basededatos
-   recuperar
-   escribir
-   publicar
-   ejemplos
-   recetas/inicio
-   alternativas/inicio
+   #introduccion
+   #instalacion
+   #revision
+   #basededatos
+   #recuperar
+   #escribir
+   #publicar
+   #ejemplos
+   #recetas/inicio
+   #alternativas/inicio
    
 
 
 
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+.. ## Indices and tables ==================
+.. ## 
+.. ## * :ref:`genindex`
+.. ## * :ref:`modindex`
+.. ## * :ref:`search`

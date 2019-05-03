@@ -9,7 +9,7 @@ Objetivo y problemática del proyecto
 El siguiente proyecto pretende desarrollar una propuesta para realizar backups en los diversos equipos
 de la Prosecretaría Informática de la Universidad Nacional de Córdoba (PSI). 
 
-[#PSI]_ La PSI tiene como misión contribuir con las funciones de docencia, investigación y extensión de la Universidad Nacional de Córdoba, 
+La PSI [#PSI]_ tiene como misión contribuir con las funciones de docencia, investigación y extensión de la Universidad Nacional de Córdoba, 
 coordinando el uso de los recursos relacionados con la informática. 
 
 Para ello sus acciones se encuadran en tres ejes principales:
@@ -31,7 +31,7 @@ con las políticas de retención de datos definidas.
 
 Objetivo General
 -----------------
-Implementar un sistema de backups para la Prosecretaría Informática de la Universidad Nacional de Córdoba.
+Implementar un esquema de backups para la Prosecretaría Informática de la Universidad Nacional de Córdoba, para asegurar la persistencia de los datos.
 
 
 
@@ -40,6 +40,7 @@ Objetivos Específicos
 
 * Captar las necesidades particulares de cada área.
 * Determinar qué sistema de backup puede ser implementando en la PSI, en base a políticas definidas.
+* Elegir herramientas opensource que se adapten a las necesidades de la prosecretaría.
 * Especificar los servicios que ofrecerá el sistema para los distintos usuarios. 
 * Analizar las siguientes tecnologías a los fines de poder seleccionar y aplicar en el sistema de backups:
     * Docker
@@ -53,7 +54,7 @@ Objetivos Específicos
 
 Destinatarios
 ----------------------
-El sistema de backups estará dirigido a toda la comunidad de la PSI.
+El sistema de backups estará dirigido a todas las áreas que interactúen con la PSI.
 
 
 Beneficios Esperados
@@ -66,3 +67,45 @@ La implementación de un sistema de backups ofrece diversos beneficios tanto par
 
 
 .. [#PSI] PSI http://www.psi.unc.edu.ar/
+
+
+Estudio técnico
+-----------------
+
+En el presente proyecto de final de grado se pretende proporcionar una solución de respaldo de información en la Universidad Nacional de Córdoba, 
+El proyecto esta en sus primeras etapas de planificación.
+Para poder llevarlo a cabo es necesario incorporar ciertos conocimientos:
+
+Tecnologías de utilización
+""""""""""""""""""""""""""""
+
+1. Sistema Operativo Linux
+
+    *   Debian
+    *   Centos
+    *   Ubuntu
+    *   Fedora
+    *   Red Hat
+2. Lenguaje de programación
+
+    *   Bash
+    *   Python
+    *   C++
+3. Herramientas OpenSource para respaldo de información.
+
+Metodología
+------------
+
+La metodología para la implementación de un sistema de backups en la Universidad Nacional de Córdoba consistirá en especificar
+de forma detallada la infraestructura existente en la PSI. 
+Se realizará un relevamiento con los distintos usuarios para conocer, visualizar los distintos casos a realizar 
+respaldos dependiendo de cada area.*(Ej: cantidad de archivos, tamaño de archivos, maquinas virtuales, servidores fisicos etc)*.
+A su vez se establecerán distintas prioridades de acuerdo a la criticidad de los datos.
+
+Una vez conocido los distintos casos, analizar los distintos esquemas de respaldos y definir cual se adapta más a la necesidad de cada servidor.
+Por otro lado, evaluar distintas herramientas de backups OpenSource que se encuentran en el mercado, y en el caso de ser necesario, realizar modificaciones para adaptarlas a nuestro campo de implementación. 
+
+Se considera que la metodologia de **entrega incremental** es la que mejor se adapta a este, ya que las entregas se relacionan
+con la implementacion de las distintas políticas
+
+

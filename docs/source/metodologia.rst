@@ -10,8 +10,9 @@ Metodología
 
 La metodología para la implementación de un sistema de backups en la Universidad Nacional de Córdoba consistirá en especificar
 de forma detallada la infraestructura existente en la PSI. 
-Se realizará un relevamiento para conocer, visualizar los distintos casos a realizar 
-respaldos *(Ej: cantidad de archivos, tamaño de archivos, maquinas virtuales, servidores fisicos etc)*.
+Se realizará un relevamiento con los distintos usuarios para conocer, visualizar los distintos casos a realizar 
+respaldos dependiendo de cada area.*(Ej: cantidad de archivos, tamaño de archivos, maquinas virtuales, servidores fisicos etc)*.
+A su vez se establecerán distintas prioridades de acuerdo a la criticidad de los datos.
 
 Una vez conocido los distintos casos, analizar los distintos esquemas de respaldos y definir cual se adapta más a la necesidad de cada servidor.
 Por otro lado, evaluar distintas herramientas de backups OpenSource que se encuentran en el mercado, y en el caso de ser necesario, realizar modificaciones para adaptarlas a nuestro campo de implementación. 
