@@ -28,28 +28,35 @@ en otro/otros dispositivos con el objeto de poder restaurar los datos en caso de
 sus datos se encuentren corruptos. También brinda la posibilidad de acceder a datos anteriores para buscar archivos específicos de acuerdo
 con las políticas de retención de datos definidas.
 
+La forma en que se lleva a cabo el proceso de backup se consolida mediante politicas de backup precisas, claras y adaptadas a la PSI. Estas políticas
+determinan:
+
+* cómo se lleva a cabo el proceso
+* qué hardware, software y factor humano intervendrá
+* dónde se almacenarán los datos
+* cuánto tiempo se mantendrán los datos
+* la frecuencia de las copias de resguardo
+* los tipos de backups que se llevarán a cabo 
+* el plan de recuperación de datos
+
 
 Objetivo General
 -----------------
-Implementar un esquema de backups para la Prosecretaría Informática de la Universidad Nacional de Córdoba, para asegurar la persistencia de los datos.
+Implementar una solución de backups para la Prosecretaría Informática de la Universidad Nacional de Córdoba, para asegurar la persistencia de los datos de los múltiples sistemas.
 
 
 
 Objetivos Específicos
 ----------------------
 
-* Captar las necesidades particulares de cada área.
-* Determinar qué sistema de backup puede ser implementando en la PSI, en base a políticas definidas.
-* Elegir herramientas opensource que se adapten a las necesidades de la prosecretaría.
-* Especificar los servicios que ofrecerá el sistema para los distintos usuarios. 
-* Analizar las siguientes tecnologías a los fines de poder seleccionar y aplicar en el sistema de backups:
-    * Docker
-    * Rancher
-    * Grafana
-    * Ansible
-    * Drive
-* Realizar un sistema de monitoreo, para el mantenimiento de los servidores.
-* Planificar, definir y desarrollar un sistema de backups con despliegue automático. 
+* Identificar los sistemas y equipos que necesitan backups de la PSI
+* Relevar las políticas de backups definidas
+* Proponer un sistema de backup que cumpla con las politicas relevadas 
+* Elegir herramientas opensource que tengan las funicionalidad necesarias para poder realizar los backup con los criterios necesarios.
+* Relevar los usuarios del sistema y sus necesidades de acceso a los backups.
+* Desarrollar una solución para brindarle los backups en tiempo y forma a los usuarios autorizados.
+* Realizar un sistema de monitoreo para ver el estado de los backups.
+* Desarrollar procedimientos precisos para automatuzar lso despliegues de los clientes de backups.
 
 
 Destinatarios
