@@ -11,6 +11,7 @@ Bienvenido a la documentación!
    :caption: Contenido:
 
    objetivos
+   marco_contextual
 .. estudio_tecnico
    metodologia
    resumen_tecnico

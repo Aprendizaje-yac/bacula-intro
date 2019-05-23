@@ -56,7 +56,7 @@ Objetivos Específicos
 * Relevar los usuarios del sistema y sus necesidades de acceso a los backups.
 * Desarrollar una solución para brindarle los backups en tiempo y forma a los usuarios autorizados.
 * Realizar un sistema de monitoreo para ver el estado de los backups.
-* Desarrollar procedimientos precisos para automatuzar lso despliegues de los clientes de backups.
+* Desarrollar procedimientos precisos para automatizar los despliegues de los clientes de backups.
 
 
 Destinatarios
@@ -68,7 +68,7 @@ Beneficios Esperados
 ----------------------
 La implementación de un sistema de backups ofrece diversos beneficios tanto para la PSI como para los usuarios de los diversos sistemas, tales como:
 
-* Capacidad de respuesta: gracias a las copias guardadas, se podrá volver a tener todos los sistemas plenamente operativos en un breve lapso de tiempo.Esto se traduce en un nivel superior de eficiencia, permitiendo restaurar la información y servicios de manera eficaz.
+* Capacidad de respuesta: gracias a las copias guardadas, se podrá volver a tener todos los sistemas plenamente operativos en un breve lapso de tiempo. Esto se traduce en un nivel superior de eficiencia, permitiendo restaurar la información y servicios de manera eficaz.
 * Incremento de la confianza en los usuarios: al disponer de redundancia de información
 
 
