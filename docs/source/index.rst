@@ -12,6 +12,7 @@ Bienvenido a la documentación!
 
    objetivos
    rclone
+   snapshotvirtuales
 .. #marco_contextual
 .. estudio_tecnico
    metodologia
