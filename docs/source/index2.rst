@@ -10,7 +10,6 @@ Bienvenido a la documentación!
    :maxdepth: 3
    :caption: Contenido:
 
-   antecedentes
    objetivos
    rclone
    snapshotvirtuales
