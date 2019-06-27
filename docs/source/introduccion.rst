@@ -20,6 +20,27 @@ alguno de estos genere grandes repercusiones.
 Se define como un recurso informático a todos aquellos componentes tanto de hardware como de software que son necesarios para el buen funcionamiento y la 
 optimización del trabajo de computadoras y periféricos, tanto a nivel individual como organizativo.
 
+Situación problemática
+-----------------------
 
+
+
+Objeto de estudio
+------------------
+
+
+
+Campo de acción
+----------------
+
+
+
+Objetivos
+----------
+Objetivo general
+-*-*-*-*-*-*-*-*-
+
+Objetivos específicos
+-*-*-*-*-*-*-*-*-*-*-*-
 
 
