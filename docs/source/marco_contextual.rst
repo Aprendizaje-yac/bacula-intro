@@ -16,3 +16,24 @@ A estos Sistemas,  se los puede agrupar de la siguiente manera:
 * Sistemas para Soporte a la Educación a Distancia
 * Sitios web y otros sistemas
 
+Dentro de la PSI encontramos equipos con:
+
+* distintos sistemas operativos como openSUSE, CentOS, ClearLinux, Debian, Oracle, Red Hat, Ubuntu, entre otros, cada uno en varias versiones. 
+* variedad de equipos, desde equipos físicos como virtuales, base de datos, switches, entre otros. 
+
+Análisis de los problemas observados
+-------------------------------------
+Dentro de la PSI encontramos los siguientes problemas a resolver:
+
+* Existen sistemas que actualmente no están teniendo copias de respaldos.
+* Dado un activo informático, se desconoce el estado de sus backups. No se puede visualizar de manera rápida y eficiente los backups realizados y los estados de los mismos. 
+* La información del estado de los backups no se encuentra integrada, es decir, no hay manera rápida de visualizar el estado general de los mismos. 
+* El proceso de recuperación de un archivos es engorroso y muchas veces no se lo encuentra, aún cuando el respaldo exista. 
+* No exite un conocimiento público para los administradores de los diversos sitios o equipos del estado de los backups que tienen sus equipos ni la frecuencia de los mismos. 
+* Los administradores no poseen un lugar donde puedan descargar sus backups de manera rápida y eficiente, generando grandes esperas hasta que el respaldo se encuentre y esté disponible. 
+* No existe un lugar centralizado donde se conozca el estado de todos los backups. 
+
+
+
+Antecedentes de proyectos similares
+------------------------------------

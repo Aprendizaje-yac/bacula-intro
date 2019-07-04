@@ -11,10 +11,11 @@ Bienvenido a la documentación!
    :caption: Contenido:
 
    introduccion
-   objetivos
+   marco_contextual
+   marco_teorico
    rclone
    snapshotvirtuales
-.. #marco_contextual
+  
 .. estudio_tecnico
    metodologia
    resumen_tecnico
