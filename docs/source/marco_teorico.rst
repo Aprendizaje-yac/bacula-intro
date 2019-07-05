@@ -1,16 +1,14 @@
 Marco Teórico
 =====================
 
-La ISO/IEC 27002 define a la información como un activo que es esencial para el negocio de una organización y en consecuencia necesita ser protegido adecuadamente y a la seguridad de la información como la preservación de confidencialidad, integración y disponibilidad de la información. [#ISOIEC27002DEF]_
+La ISO/IEC 27002 define a la información como un recurso que tiene valor para una organización y por consiguiente debe ser debidamente protegida y a la seguridad de la información como la protección de la información de una amplia variedad de amenazas, con el objeto de asegurar la continuidad del negocio, minimizar los riesgos y maximizar el retorno de la inversión y las oportunidades de negocio. [#ISOIEC27002DEFINFO]_
 
 Backup, copia de seguridad o copia de respaldo
 -----------------------------------------------
 
 El backup, copia de resguardo, copia de reserva, es una copia exacta de los datos originales de un sistema de información o de un conjunto de software (archivos, documentos, etc) que se  almacena en un lugar seguro, con el fin de poder volver a disponer de su información en caso de que alguna eventualidad, accidente o desastre ocurra y ocasione su pérdida del sistema. [#BCKDEF]_
 
-La ISO define que el objetivo de un Backup o respaldo es mantener la integridad y disponibilidad de la información y los medios de procesamiento de información. Además, afirma que se debieran establecer los procedimientos de rutina para implementar la política de respaldo acordada y la estrategia para tomar copias de respaldo de la data y practicar su restauración oportuna. [#ISOIEC27002BCK]_
-
-Lineamientos de implementación
+Lineamientos de implementación [#ISOIEC27002LIN]_
 """""""""""""""""""""""""""""""
 Los lineamiento de implementación de backup que propone son los siguientes:
 
@@ -33,28 +31,41 @@ recuperar el sistema completo en caso de un desastre.
 
 Se debiera determinar el período de retención para la información comercial esencial, y también cualquier requerimiento para que las copias de archivo se mantengan permanentemente.
 
-.. [#ISOIEC27002DEF] iso
-.. [#ISOIEC27002BCK] iso página 73
-.. [#BCKDEF] https://concepto.de/backup/
-
 
 Importancia de los backups
 --------------------------
+La ISO define que el objetivo de un backup o respaldo es mantener la integridad y disponibilidad de la información y de las instalaciones del procesamiento de la información. Además, afirma que se debieran establecer los procedimientos de rutina para implementar la política de respaldo acordada y la estrategia para tomar copias de respaldo de la data y practicar su restauración oportuna. [#ISOIEC27002OBJBACK]_
 
+Dentro de los beneficios que encontramos en el tener un sistema de backup se encuentran:
 
-Estrategias de Backup
-----------------------
-Una estrategia de backup debe cubrir los siguientes aspectos: 
-#. Determinar la información que se respaldará. 
-#. Periodicidad y tipo de copias
-#. 
+* Capacidad de respuesta: debido a las copias de respaldo se puede volver a tener un sistema totalmente operativo en un breve lapso de tiempo. 
+* Incremento de la confianza del cliente
+
 
 Tipos de backups
 -----------------
+Full
+"""""
+Consiste en hacer una copia de todos los datos del sistema en otro soporte. 
+La ventaja principal de este tipo de copia es que proporciona una fácil restauración de los datos. 
+Desventajas:
 
+* Mayor necesidad de espacio de almacenamiento. Puesto que se realiza la copia total del sistema cada vez que se ejecuta el respaldo, provocando que se almacene múltiples veces todos los archivos, incluso aquellos 
+
+Diferencial
+""""""""""""
+
+
+Incremental
+""""""""""""
 
 
 Responsables de backups
 ------------------------
 
+
+.. [#ISOIEC27002DEFINFO] ISO/IEC 27002 página 9
+.. [#BCKDEF] https://concepto.de/backup/
+.. [#ISOIEC27002LIN] ISO/IEC 27002 página 60
+.. [#ISOIEC27002OBJBACK] ISO/IEC 27002 página 60
 

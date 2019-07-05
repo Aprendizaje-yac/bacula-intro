@@ -13,6 +13,8 @@ Bienvenido a la documentación!
    introduccion
    marco_contextual
    marco_teorico
+   modelo_teorico
+   concrecion_modelo
    rclone
    snapshotvirtuales
   
