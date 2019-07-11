@@ -72,7 +72,7 @@ Restaurar una copia de seguridad diferencial es un proceso mucho más rápido qu
 Incremental
 """"""""""""
 Consiste en realizar una copia de los archivos que han cambiado desde la última copia, cualquiera sea (full, diferencial o incremental). De esta manera se reduce considerablemente el espacio y tiempo necesario empleado en el proceso de backup. 
-Pero, restaurar una copia de seguridad incremental implica tener una copia full y todas las copias intermedias (diferenciales o incrementales) hasta la que se desea restaurar. Además, un fallo en alguna de las copias internas puede ocasionar que no se pueda restaurar el backup. 
+El inconveniente de este tipo de copia reside en la recuperación de datos, ya que si se quiere recuperar un directorio completo cuyos archivos han sido modificados poco a poco, se deben recuperar los diferentes archivos de las distintas copias incrementales más la copia completa. Entonces, restaurar una copia de seguridad incremental implica tener una copia full y todas las copias intermedias (diferenciales, incrementales) hasta la que se desea restaurar. Además, un fallo en alguna de las copias internas puede ocasionar que no se pueda restaurar el backup. 
 
 
 Responsables de backups
