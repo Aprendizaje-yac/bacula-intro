@@ -29,9 +29,8 @@ Dentro de la PSI encontramos los siguientes problemas a resolver:
 * Dado un activo informático, se desconoce el estado de sus backups. No se puede visualizar de manera rápida y eficiente los backups realizados y los estados de los mismos. 
 * La información del estado de los backups no se encuentra integrada, es decir, no hay manera rápida de visualizar el estado general de los mismos. 
 * El proceso de recuperación de un archivos es engorroso y muchas veces no se lo encuentra, aún cuando el respaldo exista. 
-* No exite un conocimiento público para los administradores de los diversos sitios o equipos del estado de los backups que tienen sus equipos ni la frecuencia de los mismos. 
+* No existe un conocimiento público para los administradores de los diversos sitios o equipos del estado de los backups que tienen sus equipos ni la frecuencia de los mismos. 
 * Los administradores no poseen un lugar donde puedan descargar sus backups de manera rápida y eficiente, generando grandes esperas hasta que el respaldo se encuentre y esté disponible. 
-* No existe un lugar centralizado donde se conozca el estado de todos los backups. 
 
 
 
