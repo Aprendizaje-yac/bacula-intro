@@ -90,8 +90,8 @@ A continuación se listan las historias de usuarios identificadas tras varias re
 Sobre respaldo a equipos
 """""""""""""""""""""""""
 
-Como usuario propietario de la información
-'''''''''''''''''''''''''''''''''''''''''''
+Como propietario de la información
+''''''''''''''''''''''''''''''''''''
 Como usuario quiero poder definir a qué se le debe hacer respaldo.
 
 Como usuario quiero poder definir la frecuencia de los respaldos.
@@ -108,7 +108,73 @@ Como administrador del servicio
 '''''''''''''''''''''''''''''''''''''
 Como usuario quiero poder acceder a los backups en caso de ser necesario. 
 
+Como administrador de backups
+'''''''''''''''''''''''''''''''''''''
+Como usuario quiero poder crear y administrar filesets (conjunto de directorios o archivos).
+
+Como usuario quiero poder recibir un reporte de los estados de los backups.
 
 
+Investigación
+==============
+
+Las características deseables de un sistema de respaldo de información:
+
+* Copia y recuperación consistente. 
+* Automatización de tareas. 
+* Seguridad y fiabilidad. 
+* Simplicidad de uso (curva de aprendizaje). 
+* Almacenamiento en diversos medios.
+* Generación de informes. 
 
 
+Herramientas open source usadas para sistemas de backups
+
+Bacula 
+------
+Es un conjunto de programas open source que permiten administrar copias de seguridad, recuperar y la verificar los datos de la computadora en una red de computadoras de diferentes tipos. Bacula también se puede ejecutar completamente en una sola computadora y puede realizar copias de seguridad en varios tipos de medios, incluidas cintas y discos.
+
+Su infraestructura está basada en cliente / servidor de red. Bacula es relativamente fácil de usar y eficiente, al tiempo que ofrece muchas funciones avanzadas de gestión de almacenamiento que facilitan la búsqueda y recuperación de archivos perdidos o dañados. Debido a su diseño modular, Bacula es escalable desde pequeños sistemas informáticos a sistemas que consisten en cientos de computadoras ubicadas en una gran red. [#BaculaQuees]_
+
+Componentes de Bacula
+"""""""""""""""""""""""""""
+Director (DIR, bacula-director) es el programa servidor que supervisa todas las funciones necesarias para las operaciones de copia de seguridad y restauración. Es el eje central de Bacula y en él se declaran todos los parámetros necesarios. Se ejecuta como un “demonio” en el servidor.
+
+Storage (SD, bacula-sd) es el programa que gestiona las unidades de almacenamiento donde se almacenarán los datos. Es el responsable de escribir y leer en los medios que utilizaremos para nuestras copias de seguridad. Se ejecuta como un “demonio” en la máquina propietaria de los medios utilizados. En muchos casos será en el propio servidor, pero también puede ser otro equipo independiente.
+
+Catalog es la base de datos (MySQL en nuestro caso) que almacena la información necesaria para localizar donde se encuentran los datos salvaguardados de cada archivo, de cada cliente, etc. En muchos casos será en el propio servidor, pero también puede ser otro equipo independiente.
+
+Console (bconsole) es el programa que permite la interacción con el “Director” para todas las funciones del servidor. La versión original es una aplicación en modo texto (bconsole). Existen igualmente aplicaciones GUI para Windows y Linux (Webmin, Bacula Admin Tool, Bacuview, Webacula, Reportula, Bacula-Web, etc).
+
+File (FD) Este servicio, conocido como “cliente” o servidor de ficheros está instalado en cada máquina a salvaguardar y es específico al sistema operativo donde se ejecuta. Responsable para enviar al “Director” los datos cuando este lo requiera. [#BaculaComponentes]_
+
+Caracteristicas
+"""""""""""""""""
+
+* Tiene garantía de copia y recuperación consistente.
+* Tiene garantía de seguridad y fiabilidad de información porque es capaz de usar algoritmos de cifrados. 
+* Tiene garantía de almacenamiento en diversos medios.
+* No presenta simplicidad de uso. 
+* No presenta una forma automática generación de informes.
+* Tiene automatización de tareas.
+* Presenta solución de catálogo. 
+
+.. [#BaculaQuees] ¿Qué es Bacula? https://www.bacula.org/9.4.x-manuals/en/main/What_is_Bacula.html
+.. [#BaculaComponentes] Componentes o servicios de Bacula https://www.bacula.org/9.4.x-manuals/en/main/What_is_Bacula.html
+
+Burp
+-----
+
+Duplicity
+----------
+
+
+Amanda 
+-------
+AMANDA, el Advanced Maryland Automatic Network Disk Archiver, es una solución de respaldo que le permite al administrador de TI configurar un único servidor de respaldo maestro para hacer una copia de seguridad de múltiples hosts a través de la red en unidades de cinta / cambiadores o discos o medios ópticos. Amanda usa utilidades y formatos nativos (por ejemplo, volcado y / o tar de GNU) y puede hacer una copia de seguridad de una gran cantidad de servidores y estaciones de trabajo que ejecutan varias versiones de Linux o Unix. 
+
+Componentes de Bacula
+""""""""""""""""""""""
+
+Caracteristicas
+"""""""""""""""""

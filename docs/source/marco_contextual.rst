@@ -21,6 +21,9 @@ Dentro de la PSI encontramos equipos con:
 * distintos sistemas operativos como openSUSE, CentOS, ClearLinux, Debian, Oracle, Red Hat, Ubuntu, entre otros, cada uno en varias versiones. 
 * variedad de equipos, desde equipos físicos como virtuales, base de datos, switches, entre otros. 
 
+
+
+
 Análisis de los problemas observados
 -------------------------------------
 Dentro de la PSI encontramos los siguientes problemas a resolver:
