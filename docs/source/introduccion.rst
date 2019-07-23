@@ -75,7 +75,8 @@ Objetivos
 ----------
 Objetivo general
 """""""""""""""""
-Implementar una solución de backups para la Prosecretaría Informática de la Universidad Nacional de Córdoba, para asegurar la persistencia de los datos de los múltiples sistemas.
+Implementar una solución de backups para la Prosecretaría Informática de la Universidad Nacional de Córdoba, para asegurar la persistencia de los datos de los múltiples sistemas basado en las buenas prácticas.
+
 
 
 Objetivos específicos
@@ -88,6 +89,7 @@ Objetivos específicos
 * Desarrollar una solución para brindarle los backups en tiempo y forma a los usuarios autorizados.
 * Realizar un sistema de monitoreo para ver el estado de los backups.
 * Desarrollar procedimientos precisos para automatizar los despliegues de los clientes de backups.
+* Documentar el proceso de respaldo de información, para evidenciar de forma clara y concreta las herramientas y procedimientos que se deben tener en cuenta para dicho proceso.
 
 Aporte
 -------
