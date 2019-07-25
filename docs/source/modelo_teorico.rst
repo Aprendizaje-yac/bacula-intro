@@ -162,6 +162,7 @@ Caracteristicas
 .. [#BaculaQuees] ¿Qué es Bacula? https://www.bacula.org/9.4.x-manuals/en/main/What_is_Bacula.html
 .. [#BaculaComponentes] Componentes o servicios de Bacula https://www.bacula.org/9.4.x-manuals/en/main/What_is_Bacula.html
 
+
 Burp
 -----
 
@@ -169,11 +170,11 @@ Duplicity
 ----------
 
 
-Amanda 
--------
+Amanda (zmanda)
+----------------
 AMANDA, el Advanced Maryland Automatic Network Disk Archiver, es una solución de respaldo que le permite al administrador de TI configurar un único servidor de respaldo maestro para hacer una copia de seguridad de múltiples hosts a través de la red en unidades de cinta / cambiadores o discos o medios ópticos. Amanda usa utilidades y formatos nativos (por ejemplo, volcado y / o tar de GNU) y puede hacer una copia de seguridad de una gran cantidad de servidores y estaciones de trabajo que ejecutan varias versiones de Linux o Unix. 
 
-Componentes de Bacula
+Componentes de Amanda
 """"""""""""""""""""""
 
 Caracteristicas
