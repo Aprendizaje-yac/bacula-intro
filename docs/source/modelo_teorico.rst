@@ -163,19 +163,36 @@ Caracteristicas
 .. [#BaculaComponentes] Componentes o servicios de Bacula https://www.bacula.org/9.4.x-manuals/en/main/What_is_Bacula.html
 
 
-Burp
------
-
-Duplicity
+BackupPC
 ----------
+Sistema de alto rendimiento y nivel empresarial para realizar copias de seguridad de computadoras, computadoras de escritorio y portátiles Unix, Linux, WinXX y MacOSX en el disco de un servidor. BackupPC es altamente configurable y fácil de instalar y mantener.
+BackupPC presenta herramientas que hacen qe minimice el almacenamiento en disco y la E/S de disco. Esto es así porque los archivos idénticos de diferentes copias de seguridad se almacenan sólo una vez (usando enlaces). No es necesario ningún cliente, ya que el propio servidor es un cliente para varios protocolos que son manejados por otros servicios nativos del sistema operativo cliente. 
 
-
-Amanda (zmanda)
-----------------
-AMANDA, el Advanced Maryland Automatic Network Disk Archiver, es una solución de respaldo que le permite al administrador de TI configurar un único servidor de respaldo maestro para hacer una copia de seguridad de múltiples hosts a través de la red en unidades de cinta / cambiadores o discos o medios ópticos. Amanda usa utilidades y formatos nativos (por ejemplo, volcado y / o tar de GNU) y puede hacer una copia de seguridad de una gran cantidad de servidores y estaciones de trabajo que ejecutan varias versiones de Linux o Unix. 
-
-Componentes de Amanda
-""""""""""""""""""""""
 
 Caracteristicas
 """""""""""""""""
+
+* Tiene garantía de copia y recuperación consistente.
+* Tiene garantía de seguridad y fiabilidad de información porque es capaz de usar algoritmos de cifrados. 
+* Tiene garantía de almacenamiento en al menos un tipo de medio.
+* Presenta simplicidad de uso. Dispone de una interfaz gráfica. 
+* Presenta una forma automática generación de informes.
+* Tiene automatización de tareas.
+
+
+Amanda 
+-------
+AMANDA, el Advanced Maryland Automatic Network Disk Archiver, es una solución de respaldo que le permite al administrador de TI configurar un único servidor de respaldo maestro para hacer una copia de seguridad de múltiples hosts a través de la red en unidades de cinta / cambiadores o discos o medios ópticos. Amanda usa utilidades y formatos nativos (por ejemplo, volcado y / o tar de GNU) y puede hacer una copia de seguridad de una gran cantidad de servidores y estaciones de trabajo que ejecutan varias versiones de Linux o Unix. 
+Amanda presenta una arquitectura cliente/ servidor. La mayor ventaja de Amanda sobre cualquier otro software de respaldo es que Amanda no utiliza ningún formato de datos de propiedad exclusiva. Amanda usa utilidades estándar de sistemas operativos como dump y tar , o utilidades de código abierto disponibles en muchos sistemas operativos como GNUtar , smbtar y Schily tar, y utiliza el mismo formato de archivo en el medio. 
+
+
+Características
+"""""""""""""""""
+
+* Tiene garantía de copia y recuperación consistente.
+* Tiene garantía de seguridad y fiabilidad de información porque es capaz de usar algoritmos de cifrados. 
+* Tiene garantía de almacenamiento en al menos un tipo de medio.
+* No presenta simplicidad de uso. Tampoco ofrece una interfaz gráfica intuitiva y ágil.
+* No presenta una forma automática generación de informes.
+* Tiene automatización de tareas.
+* Realiza backups con utilidades estándar de sistemas operativos. 
