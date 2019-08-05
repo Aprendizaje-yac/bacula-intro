@@ -75,11 +75,16 @@ Los recursos informáticos que se disponen en la PSI son:
 
 * Servidor de archivos (NFS): almacenan distintos tipos de archivos y los distribuye en los diversos clientes en la red.
 * Servidor de aplicaciones: aloja las aplicaciones de la UNC y de las dependencias correspondientes. 
-* Servidor de correo electrónico: almacena, envía, recibe, enruta y realiza operaciones relacionalas con email para los clientes. 
+* Servidor de correo electrónico: almacena, envía, recibe, enruta y realiza operaciones relacionales con email para los clientes. 
 * Servidor de base de datos: provee servicios de base de datos a otros programas. 
 * Servidor DNS:
 * Servidor web:
 * Switches y Routers:
+
+Infraestructura existente 
+--------------------------
+
+
 
 
 Historias de usuarios
@@ -113,6 +118,8 @@ Como administrador de backups
 Como usuario quiero poder crear y administrar filesets (conjunto de directorios o archivos).
 
 Como usuario quiero poder recibir un reporte de los estados de los backups.
+
+Como usuario quiero conocer los tiempos en que tardan los backups en ejecutarse.
 
 
 Investigación
@@ -148,7 +155,7 @@ Console (bconsole) es el programa que permite la interacción con el “Director
 
 File (FD) Este servicio, conocido como “cliente” o servidor de ficheros está instalado en cada máquina a salvaguardar y es específico al sistema operativo donde se ejecuta. Responsable para enviar al “Director” los datos cuando este lo requiera. [#BaculaComponentes]_
 
-Caracteristicas
+Características
 """""""""""""""""
 
 * Tiene garantía de copia y recuperación consistente.
@@ -162,19 +169,48 @@ Caracteristicas
 .. [#BaculaQuees] ¿Qué es Bacula? https://www.bacula.org/9.4.x-manuals/en/main/What_is_Bacula.html
 .. [#BaculaComponentes] Componentes o servicios de Bacula https://www.bacula.org/9.4.x-manuals/en/main/What_is_Bacula.html
 
-Burp
------
 
-Duplicity
+BackupPC
 ----------
+Sistema de alto rendimiento y nivel empresarial para realizar copias de seguridad de computadoras, computadoras de escritorio y portátiles Unix, Linux, WinXX y MacOSX en el disco de un servidor. BackupPC es altamente configurable y fácil de instalar y mantener.
+BackupPC presenta herramientas que hacen qe minimice el almacenamiento en disco y la E/S de disco. Esto es así porque los archivos idénticos de diferentes copias de seguridad se almacenan sólo una vez (usando enlaces). No es necesario ningún cliente, ya que el propio servidor es un cliente para varios protocolos que son manejados por otros servicios nativos del sistema operativo cliente. 
+
+
+Caracteristicas
+"""""""""""""""""
+
+* Tiene garantía de copia y recuperación consistente.
+* Tiene garantía de seguridad y fiabilidad de información porque es capaz de usar algoritmos de cifrados. 
+* Tiene garantía de almacenamiento en al menos un tipo de medio.
+* Presenta simplicidad de uso. Dispone de una interfaz gráfica. 
+* Presenta una forma automática generación de informes.
+* Tiene automatización de tareas.
 
 
 Amanda 
 -------
 AMANDA, el Advanced Maryland Automatic Network Disk Archiver, es una solución de respaldo que le permite al administrador de TI configurar un único servidor de respaldo maestro para hacer una copia de seguridad de múltiples hosts a través de la red en unidades de cinta / cambiadores o discos o medios ópticos. Amanda usa utilidades y formatos nativos (por ejemplo, volcado y / o tar de GNU) y puede hacer una copia de seguridad de una gran cantidad de servidores y estaciones de trabajo que ejecutan varias versiones de Linux o Unix. 
+Amanda presenta una arquitectura cliente/ servidor. La mayor ventaja de Amanda sobre cualquier otro software de respaldo es que Amanda no utiliza ningún formato de datos de propiedad exclusiva. Amanda usa utilidades estándar de sistemas operativos como dump y tar , o utilidades de código abierto disponibles en muchos sistemas operativos como GNUtar , smbtar y Schily tar, y utiliza el mismo formato de archivo en el medio. 
 
-Componentes de Bacula
-""""""""""""""""""""""
 
-Caracteristicas
+Características
 """""""""""""""""
+
+* Tiene garantía de copia y recuperación consistente.
+* Tiene garantía de seguridad y fiabilidad de información porque es capaz de usar algoritmos de cifrados. 
+* Tiene garantía de almacenamiento en al menos un tipo de medio.
+* No presenta simplicidad de uso. Tampoco ofrece una interfaz gráfica intuitiva y ágil.
+* No presenta una forma automática generación de informes.
+* Tiene automatización de tareas.
+* Realiza backups con utilidades estándar de sistemas operativos. 
+
+Rsync
+-------
+
+
+
+
+
+
+Drive 
+-------
