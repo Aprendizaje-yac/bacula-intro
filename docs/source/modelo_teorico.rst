@@ -75,11 +75,16 @@ Los recursos informáticos que se disponen en la PSI son:
 
 * Servidor de archivos (NFS): almacenan distintos tipos de archivos y los distribuye en los diversos clientes en la red.
 * Servidor de aplicaciones: aloja las aplicaciones de la UNC y de las dependencias correspondientes. 
-* Servidor de correo electrónico: almacena, envía, recibe, enruta y realiza operaciones relacionalas con email para los clientes. 
+* Servidor de correo electrónico: almacena, envía, recibe, enruta y realiza operaciones relacionales con email para los clientes. 
 * Servidor de base de datos: provee servicios de base de datos a otros programas. 
 * Servidor DNS:
 * Servidor web:
 * Switches y Routers:
+
+Infraestructura existente 
+--------------------------
+
+
 
 
 Historias de usuarios
@@ -113,6 +118,8 @@ Como administrador de backups
 Como usuario quiero poder crear y administrar filesets (conjunto de directorios o archivos).
 
 Como usuario quiero poder recibir un reporte de los estados de los backups.
+
+Como usuario quiero conocer los tiempos en que tardan los backups en ejecutarse.
 
 
 Investigación
@@ -148,7 +155,7 @@ Console (bconsole) es el programa que permite la interacción con el “Director
 
 File (FD) Este servicio, conocido como “cliente” o servidor de ficheros está instalado en cada máquina a salvaguardar y es específico al sistema operativo donde se ejecuta. Responsable para enviar al “Director” los datos cuando este lo requiera. [#BaculaComponentes]_
 
-Caracteristicas
+Características
 """""""""""""""""
 
 * Tiene garantía de copia y recuperación consistente.
@@ -196,3 +203,14 @@ Características
 * No presenta una forma automática generación de informes.
 * Tiene automatización de tareas.
 * Realiza backups con utilidades estándar de sistemas operativos. 
+
+Rsync
+-------
+
+
+
+
+
+
+Drive 
+-------
