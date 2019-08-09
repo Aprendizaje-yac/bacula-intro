@@ -18,11 +18,10 @@ A estos Sistemas,  se los puede agrupar de la siguiente manera:
 
 Dentro de la PSI encontramos equipos con:
 
-* distintos sistemas operativos como openSUSE, CentOS, ClearLinux, Debian, Oracle, Red Hat, Ubuntu, entre otros, cada uno en varias versiones. 
-* variedad de equipos, desde equipos físicos como virtuales, base de datos, switches, entre otros. 
-
-
-
+* Variedad de 64 equipos físicos, de los cuales 24 se utilizan para virtualización de servidores ( 446 en total ).  
+* Los servidores cuentan con distintos sistemas operativos como openSUSE, CentOS, ClearLinux, Debian, Oracle, Red Hat, Ubuntu, Clear Linux, cada uno en distintas versiones. .
+* Bases de datos tipo Mysql, Oracle, Postgres, MariaDB, Mongo, Webdav. 
+* Switches de distintas marcas, hp, cisco.
 
 Análisis de los problemas observados
 -------------------------------------

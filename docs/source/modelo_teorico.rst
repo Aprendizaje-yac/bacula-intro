@@ -207,10 +207,20 @@ Características
 Rsync
 -------
 
-
-
-
+Rsync es una aplicacion que permite la transmisión eficiente de datos incrementales, a su vez, puede operar con datos comprimidos y cifrados. Permite sincronizar archivos y directorios entre dos máquinas de una red o entre dos ubicaciones en una misma máquina, minimizando el volumen de datos transferidos. Una característica importante de rsync no encontrada en la mayoría de programas o protocolos es que la copia toma lugar con sólo una transmisión en cada dirección. rsync puede copiar o mostrar directorios contenidos y copia de archivos, opcionalmente usando compresión y recursión.
 
 
 Drive 
+------
+
+
+
+Docker
 -------
+
+Docker es una herramienta desarrollada por la empresa Docker Inc. Esta herramienta permite la creacion y el uso de contenedores de Linux.
+Es decir, Docker usa el kernel de Linux y funciones de este, para segregar los procesos, de modo que puedan ejecutarse de manera independiente.
+
+Una de las principales virtudes del uso de contenedores es la independencia, la capacidad de ejecutar varios procesos y aplicaciones por separado para hacer un mejor uso de la infraestructura, y al mismo tiempo, conservar la seguridad.
+
+Esta herramienta ofrece un modelo de implementación basado en imagenes, donde, a través de un archivo de texto plano **Dockerfile**, se le especifican las instrucciones necesarias para automatizar la creaciòn de la imagen que será utilizada posteriormente para la ejecuciñón de las instancias especificas ( contenedores ).
