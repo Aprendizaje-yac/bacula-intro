@@ -209,16 +209,19 @@ Rsync
 
 Rsync es una aplicacion que permite la transmisión eficiente de datos incrementales, a su vez, puede operar con datos comprimidos y cifrados. Permite sincronizar archivos y directorios entre dos máquinas de una red o entre dos ubicaciones en una misma máquina, minimizando el volumen de datos transferidos. Una característica importante de rsync no encontrada en la mayoría de programas o protocolos es que la copia toma lugar con sólo una transmisión en cada dirección. rsync puede copiar o mostrar directorios contenidos y copia de archivos, opcionalmente usando compresión y recursión.
 
+.. [#RSYNC] RSYNC https://rsync.samba.org/
 
 Rclone
 -------
 
 Rclone es una herramienta open source que se basa en la utilidad Rsync, con un añadido muy interesante: soporte para multitud de servicios y protocolos.
 Dentro de los servicios podemos encontrar entre los mas comunes los siguientes:
+
 * Google Drive
 * Amazon S3
 * Openstack 
 * Modo local.
+
 Su uso es exclusivamente mediante órdenes por terminal. No es que sea difícil, porque ofrece asistentes para todo, pero requiere de dedicarle un rato, leer la documentación, probar y demás.
 
 .. [#RCLONE] RCLONE https://rclone.org/
@@ -234,5 +237,11 @@ Una de las principales virtudes del uso de contenedores es la independencia, la 
 
 Esta herramienta ofrece un modelo de implementación basado en imagenes, donde, a través de un archivo de texto plano **Dockerfile**, se le especifican las instrucciones necesarias para automatizar la creaciòn de la imagen que será utilizada posteriormente para la ejecuciñón de las instancias especificas ( contenedores ).
 
-.. [#DOCKER] Docker https://www.docker.com/
+.. [#DOCKER] DOCKER https://www.docker.com/
 
+Rancher
+-------
+
+Rancher es una plataforma de software de código abierto que permite a las organizaciones ejecutar contenedores en producción. Con Rancher, las organizaciones ya no tienen que construir una plataforma de servicios de contenedores desde cero utilizando un conjunto distinto de tecnologías de código abierto. Rancher suministra toda la pila de software necesaria para administrar contenedores en producción.
+
+.. [#RANCHER] RANCHER https://rancher.com/docs/rancher/v1.1/en/
