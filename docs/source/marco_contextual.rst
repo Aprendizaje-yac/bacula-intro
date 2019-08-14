@@ -16,16 +16,11 @@ A estos Sistemas,  se los puede agrupar de la siguiente manera:
 * Sistemas para Soporte a la Educación a Distancia
 * Sitios web y otros sistemas
 
-Dentro de la PSI encontramos equipos con:
-
-* Variedad de 64 equipos físicos, de los cuales 24 se utilizan para virtualización de servidores ( 446 en total ).  
-* Los servidores cuentan con distintos sistemas operativos como openSUSE, CentOS, ClearLinux, Debian, Oracle, Red Hat, Ubuntu, Clear Linux, cada uno en distintas versiones. .
-* Bases de datos tipo Mysql, Oracle, Postgres, MariaDB, Mongo, Webdav. 
-* Switches de distintas marcas, hp, cisco.
-
 Análisis de los problemas observados
 -------------------------------------
 Dentro de la PSI encontramos los siguientes problemas a resolver:
+
+
 
 * Existen sistemas que actualmente no están teniendo copias de respaldos.
 * Dado un activo informático, se desconoce el estado de sus backups. No se puede visualizar de manera rápida y eficiente los backups realizados y los estados de los mismos. 

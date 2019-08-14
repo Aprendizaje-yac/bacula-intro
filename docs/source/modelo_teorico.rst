@@ -68,6 +68,16 @@ Usuario de administración de la aplicación
 """"""""""""""""""""""""""""""""""""""""""""
 Es el responsable de realizar las configuraciones deseadas para que el sistema funcione correctamente.  Además, corroborará que los respaldos sean los correctos. Hace uso de los backups en caso de producirse un error o para generar pruebas específicas. 
 
+Infraestructura existente 
+--------------------------
+
+Dentro de la PSI encontramos equipos con:
+
+* Variedad de 64 equipos físicos, de los cuales 24 se utilizan para virtualización de servidores ( 446 en total ).  
+* Los servidores cuentan con distintos sistemas operativos como openSUSE, CentOS, ClearLinux, Debian, Oracle, Red Hat, Ubuntu, Clear Linux, cada uno en distintas versiones. .
+* Bases de datos tipo Mysql, Oracle, Postgres, MariaDB, Mongo, Webdav. 
+* Switches de distintas marcas, hp, cisco.
+
 Equipos a realizar backup
 --------------------------
 
@@ -80,12 +90,6 @@ Los recursos informáticos que se disponen en la PSI son:
 * Servidor DNS:
 * Servidor web:
 * Switches y Routers:
-
-Infraestructura existente 
---------------------------
-
-
-
 
 Historias de usuarios
 ----------------------
@@ -212,7 +216,7 @@ Rsync es una aplicacion que permite la transmisión eficiente de datos increment
 .. [#RSYNC] RSYNC https://rsync.samba.org/
 
 Rclone
--------
+------
 
 Rclone es una herramienta open source que se basa en la utilidad Rsync, con un añadido muy interesante: soporte para multitud de servicios y protocolos.
 Dentro de los servicios podemos encontrar entre los mas comunes los siguientes:

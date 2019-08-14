@@ -35,6 +35,7 @@ Dentro de los beneficios que encontramos en el tener un sistema de backup se enc
 
 Tipos de backups
 -----------------
+
 Full o completo
 """"""""""""""""
 Consiste en hacer una copia de todos los datos del sistema en otro soporte. Normalmente, es el punto de partida para el resto de copias de seguridad.

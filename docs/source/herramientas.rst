@@ -29,6 +29,8 @@ En este proyecto se optó por realizar distintas imágenes de acuerdo a las func
 Bacula-director
 ***************
 Va a ser el contenedor encargado de realizar los backups.
+En dicho docker se instalara La herramienta Bacula
+
 
 
 Bacula-mysql
