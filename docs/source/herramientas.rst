@@ -11,12 +11,12 @@ Herramientas Elegidas
 Docker
 """""""
 
-DOCKER es una herramienta desarrollada por la empresa Docker Inc. Esta herramienta permite la creacion y el uso de contenedores de Linux.
+DOCKER es una herramienta desarrollada por la empresa Docker Inc. Esta herramienta permite la creación y el uso de contenedores de Linux.
 Es decir, Docker usa el kernel de Linux y funciones de este, para segregar los procesos, de modo que puedan ejecutarse de manera independiente.
 
 Una de las principales virtudes del uso de contenedores es la independencia, la capacidad de ejecutar varios procesos y aplicaciones por separado para hacer un mejor uso de la infraestructura, y al mismo tiempo, conservar la seguridad.
 
-Esta herramienta ofrece un modelo de implementación basado en imagenes, donde, a través de un archivo de texto plano **Dockerfile**, se le especifican las instrucciones necesarias para automatizar la creaciòn de la imagen que será utilizada posteriormente para la ejecuciñón de las instancias especificas ( contenedores ).
+Esta herramienta ofrece un modelo de implementación basado en imagenes, donde, a través de un archivo de texto plano **Dockerfile**, se le especifican las instrucciones necesarias para automatizar la creaciòn de la imagen que será utilizada posteriormente para la ejecuciñón de las instancias especificas (contenedores).
 
 
 En este proyecto se optó por realizar distintas imágenes de acuerdo a las funcionalidades.
@@ -28,12 +28,18 @@ En este proyecto se optó por realizar distintas imágenes de acuerdo a las func
 
 Bacula-director
 ***************
+
 Va a ser el contenedor encargado de realizar los backups.
-En dicho docker se instalara La herramienta Bacula
-
-
+En dicho docker se instalarà La herramienta Bacula.
 
 Bacula-mysql
 ************
-Tendra toda la base de datos tipo __mysql__, donde quedara registrado todo el árbol de directorios, para que Bacula-director pueda manipular los archivos y 
+
+Tendra toda la base de datos tipo __mysql__, donde quedara registrado todo el árbol de directorios, para que Bacula-director pueda manipular los archivos y de esta forma tener registrado donde se encuentra los archivos para realizar las restauraciones.
+
+Bacula-restore
+**************
+
+Se encarga de ejecutar los scripts necesarios para realizar las restauraciones a principio de mes y subir los backups fulls a drive.
+Este contenedor 
 

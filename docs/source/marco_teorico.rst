@@ -80,11 +80,10 @@ recuperar el sistema completo en caso de un desastre.
 
 Se debiera determinar el período de retención para la información comercial esencial, y también cualquier requerimiento para que las copias de archivo se mantengan permanentemente.
 
+.. image:: ./_images/esquema.png
 
 
 
-
-Responsables de backups
 ------------------------
 
 
@@ -93,5 +92,4 @@ Responsables de backups
 .. [#BCKDEF] https://concepto.de/backup/
 .. [#ISOIEC27002LIN] ISO/IEC 27002 página 60
 .. [#ISOIEC27002OBJBACK] ISO/IEC 27002 página 60
-
 
